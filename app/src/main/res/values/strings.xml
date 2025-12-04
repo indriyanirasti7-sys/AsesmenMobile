@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Project Mars</string>
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Kristen Protestan</item>
+        <item>Kristen Katolik</item>
+        <item>Hindu</item>
+        <item>Buddha</item>
+        <item>Konghucu</item>
+    </string-array>
+
+    <string-array name="app_name">Project mars</string-array>
+    <string-array name="suhu">
+        <item>Celcius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+</resources>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna Terang (Light Mode) dibalik menjadi Gelap (Dark Mode) -->
+
+    <!-- Dibalik: Hitam -> Putih, Putih -> Hitam -->
+    <color name="black">#ffffff</color>
+    <color name="white">#d15d72</color>
+
+    <!-- Warna Latar Belakang dan Abu-abu Terang -->
+    <color name="bluesky">#202020</color>
+    <color name="greyy">#3A3A3A</color>
+
+    <!-- Warna Aksen dan Primer -->
+    <color name="brown">#907870</color> <!-- Aksen: Dibuat sedikit lebih terang agar kontras -->
+    <color name="purple_200">#9B68D1</color>
+    <color name="dark_purple">#776C9B</color> <!-- Dibuat lebih terang agar terlihat -->
+
+    <color name="blue">#5B86A4</color>
+    <color name="blue_dark">#6D7AE3</color>
+    <color name="blue_neon">#5FAAE5</color>
+    <color name="denim">#334C8C</color>
+
+    <!-- Pink / Merah -->
+    <color name="pink">#B93F42</color>
+    <color name="light_Pink">#FCCDD8</color>
+    <color name="pink_white">#B3808B</color>
+    <color name="pinkeu">#B54868</color>
+
+    <!-- Hijau / Teal -->
+    <color name="green_dark">#05A8B8</color> <!-- Dibuat lebih terang agar menonjol -->
+    <color name="teal_background">#7ED4C7</color> <!-- Dibuat lebih terang agar menonjol -->
+    <color name="light_green">#8BC47A</color> <!-- Dibuat lebih terang agar menonjol -->
+
+    <!-- Kuning / Coklat -->
+    <color name="yellow">#B99066</color>
+    <color name="dark_yellow">#D68A27</color>
+    <color name="light_yelow">#A07D21</color>
+    <color name="coklat">#8C654E</color>
+    <color name="light_choco">#5a3e28</color>
+    <color name="creams">#CEB8A0</color>
+    <color name="light">#896857</color>
+    <color name="chocoo">#38201c</color>
+    <color name="creamer">#000000</color>
+
+    <color name="blue_lightt">#091e57</color>
+    <color name="brownnni">#ac715b</color>
+    <color name="ijo">#015f4f</color>
+
+</resources>

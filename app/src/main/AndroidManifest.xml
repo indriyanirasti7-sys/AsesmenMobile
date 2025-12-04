@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/buku"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/tutupbuku"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectMars" >
+        <activity
+            android:name=".halaman_utama"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ACTIVITY LAINNYA -->
+        <activity
+            android:name=".konversi_suhu"
+            android:exported="false" />
+        <activity
+            android:name=".exit"
+            android:exported="false" />
+        <activity
+            android:name=".profil"
+            android:exported="false" />
+        <activity
+            android:name=".transaksi"
+            android:exported="false" />
+        <activity
+            android:name=".Penjualan"
+            android:exported="false" />
+        <activity
+            android:name=".kalkulator"
+            android:exported="false" />
+        <activity
+            android:name=".hasil_formulir"
+            android:exported="false" />
+        <activity
+            android:name=".Formulir"
+            android:exported="false" />
+    </application>
+
+</manifest>

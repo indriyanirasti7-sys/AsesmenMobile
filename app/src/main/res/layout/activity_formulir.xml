@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Formulir">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <!-- Latar Belakang (Menggunakan View sebagai latar belakang tetap) -->
+            <!-- Catatan: Di LinearLayout, View latar belakang perlu diintegrasikan ke dalam desain,
+                 atau menggunakan warna background utama jika drawable latar belakang kompleks.
+                 Saya hilangkan View latar belakang yang tumpang tindih dan fokus pada padding/margin -->
+
+            <!-- JUDUL -->
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FORMULIR PENDAFTARAN"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <!-- Area Latar Belakang (Disederhanakan untuk LinearLayout) -->
+            <!-- Di ConstraintLayout Anda memiliki View latar belakang dengan height 855dp,
+                 di sini kita gunakan margin dan CardView yang lebih terstruktur. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="40dp"
+                android:background="@drawable/latarbelakang"
+                android:paddingTop="10dp">
+
+                <!-- 1. NAMA -->
+                <TextView
+                    android:id="@+id/label_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+                    <EditText
+                        android:id="@+id/input_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Masukkan Nama Lengkap"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="textPersonName"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 2. ALAMAT -->
+                <TextView
+                    android:id="@+id/label_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+                    <EditText
+                        android:id="@+id/input_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Masukkan Alamat Lengkap"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="textPostalAddress"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 3. NO HANDPHONE -->
+                <TextView
+                    android:id="@+id/label_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Handphone"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_hp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+                    <EditText
+                        android:id="@+id/input_hp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Masukkan Nomor Handphone"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:inputType="phone"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 4. AGAMA (Spinner) -->
+                <TextView
+                    android:id="@+id/agama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agama"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_spinner_agama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp">
+                    <Spinner
+                        android:id="@+id/spinner_agama"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/agama"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 5. JENIS KELAMIN (RadioGroup) -->
+                <TextView
+                    android:id="@+id/label_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <RadioGroup
+                    android:id="@+id/radio_group_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+                    <RadioButton
+                        android:id="@+id/radio_laki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-Laki"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="30dp"/>
+                    <RadioButton
+                        android:id="@+id/radio_perempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+
+                <!-- 6. HOBI (CheckBox Group) -->
+                <TextView
+                    android:id="@+id/label_hobi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hobi"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:id="@+id/checkbox_group_hobi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:paddingHorizontal="0dp"
+                    android:layout_marginBottom="20dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_membaca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Membaca"
+                        android:textColor="@color/black"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_merajut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Merajut"
+                        android:textColor="@color/black"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_olahraga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Olahraga"
+                        android:textColor="@color/black"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_melukis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Melukis"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <!-- 7. SUBMIT BUTTON (Di dalam CardView) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_button_submit"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#FFB6C1"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SUBMIT"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

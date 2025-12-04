@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="10dp"
+    android:padding="22dp"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/light_choco"
+    tools:context=".exit">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/keluarr"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apakah Anda Yakin Ingin Keluar?"
+            android:textStyle="bold"
+            android:textColor="@color/light_Pink"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:layout_marginBottom="28dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/tidak"
+                android:layout_width="2dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Tidak"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:backgroundTint="#E0E0E0"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"/>
+
+            <Button
+                android:id="@+id/ya"
+                android:layout_width="2dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E53935"
+                android:padding="10dp"
+                android:text="Ya"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
