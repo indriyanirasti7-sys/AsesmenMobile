@@ -9,17 +9,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.lang.ArithmeticException
+import java.lang.NumberFormatException
 
 class kalkulator : AppCompatActivity() {
 
-    private lateinit var tvDisplay1: TextView
-    private lateinit var tvDisplay2: TextView
+    private lateinit var tvDisplay1: TextView // Layar utama (input/hasil saat ini)
+    private lateinit var tvDisplay2: TextView // Layar riwayat (operasi yang sedang berlangsung)
 
     private var currentInput = "0"
-    private var firstOperand = 0.0
-    private var secondOperand = 0.0
+    private var firstOperand = 0.0 // Operand pertama untuk perhitungan saat ini (atau hasil perhitungan sebelumnya)
+    private var secondOperand = 0.0 // Operand kedua
     private var currentOperator = ""
-    private var shouldResetInput = false
+    private var shouldResetInput = false // true jika input berikutnya harus menggantikan currentInput (setelah operator atau =)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,7 +79,7 @@ class kalkulator : AppCompatActivity() {
             clearAll()
         }
 
-        findViewById<Button>(R.id.btnsatu).setOnClickListener {
+        findViewById<Button>(R.id.btnsatu).setOnClickListener { // Asumsi btnsatu adalah Backspace
             backspace()
         }
 
@@ -106,12 +108,15 @@ class kalkulator : AppCompatActivity() {
         val number = button.text.toString()
 
         if (shouldResetInput) {
-            currentInput = "0"
+            currentInput = "0" // Reset currentInput setelah operator atau =
             shouldResetInput = false
+            // Penting: firstOperand sudah di-set di onOperatorClick, jadi tidak perlu diubah di sini
         }
 
-        if (currentInput == "0") {
+        if (currentInput == "0" && number != ".") {
             currentInput = number
+        } else if (currentInput == "-0" && number != ".") { // Mengatasi -0
+            currentInput = if (currentInput.startsWith("-")) "-$number" else number
         } else {
             currentInput += number
         }
@@ -120,22 +125,46 @@ class kalkulator : AppCompatActivity() {
     }
 
     private fun onOperatorClick(operator: String) {
+        // 1. Jika sudah ada operator aktif, lakukan perhitungan sementara.
+        // Ini memungkinkan perhitungan berantai seperti 2+3+4...
         if (currentOperator.isNotEmpty()) {
-            calculateResult()
+            performIntermediateCalculation()
         }
 
         try {
-            firstOperand = currentInput.toDouble()
-            currentOperator = operator
-            shouldResetInput = true
+            // 2. Set firstOperand: Gunakan currentInput jika baru mulai operasi
+            // atau jika input baru dimasukkan setelah perhitungan sebelumnya.
+            if (!shouldResetInput) {
+                firstOperand = currentInput.toDouble()
+            }
 
-            tvDisplay2.text = "$firstOperand $operator"
+            // 3. Set operator baru
+            currentOperator = operator
+            shouldResetInput = true // Input berikutnya akan menjadi secondOperand baru
+
+            // 4. Update display: Tampilkan operand pertama dan operator baru
+            // Jika tvDisplay2 kosong, tampilkan firstOperand + operator
+            val currentDisplay2 = tvDisplay2.text.toString()
+            if (currentDisplay2.isEmpty() || currentDisplay2.endsWith("=") || shouldResetInput) {
+                tvDisplay2.text = "${formatResult(firstOperand)} $operator"
+            } else {
+                // Jika sudah ada operasi berlanjut, tambahkan operator baru
+                tvDisplay2.text = "$currentDisplay2 $operator"
+            }
+
+            // Pastikan currentInput di tvDisplay1 menampilkan firstOperand
+            currentInput = formatResult(firstOperand)
+            updateDisplay()
         } catch (e: NumberFormatException) {
             showError("Invalid number")
         }
     }
 
-    private fun calculateResult() {
+    /**
+     * Melakukan perhitungan saat operator kedua atau berikutnya ditekan
+     * (e.g., A + B, lalu menekan - akan menghitung A+B, lalu menyimpan hasilnya sebagai A)
+     */
+    private fun performIntermediateCalculation() {
         if (currentOperator.isEmpty()) return
 
         try {
@@ -155,11 +184,82 @@ class kalkulator : AppCompatActivity() {
                 else -> 0.0
             }
 
-            // Format hasil
+            // 1. Hasilnya menjadi firstOperand untuk operasi berikutnya
+            firstOperand = result
+
+            // 2. Update currentInput (tvDisplay1) dengan hasil sementara
             currentInput = formatResult(result)
-            tvDisplay2.text = "$firstOperand $currentOperator $secondOperand ="
-            currentOperator = ""
-            shouldResetInput = true
+
+            // 3. Update Display 2: Tambahkan operand kedua ke operasi yang sedang berlangsung
+            // Contoh: "2 + " menjadi "2 + 3"
+            val currentDisplay2 = tvDisplay2.text.toString()
+            val operatorSymbol = currentDisplay2.last().toString()
+
+            // Hapus operator lama, tambahkan operand, lalu biarkan onOperatorClick menambahkan operator baru
+            tvDisplay2.text = currentDisplay2.substring(0, currentDisplay2.length - operatorSymbol.length) +
+                    "${formatResult(secondOperand)}"
+
+
+            shouldResetInput = true // Input berikutnya akan menjadi operand kedua yang baru
+
+            updateDisplay()
+        } catch (e: ArithmeticException) {
+            showError("Cannot divide by zero")
+        } catch (e: NumberFormatException) {
+            showError("Invalid number")
+        }
+    }
+
+
+    private fun calculateResult() {
+        if (currentOperator.isEmpty()) return
+
+        try {
+            // Jika currentInput belum di-reset, secondOperand adalah currentInput
+            if (shouldResetInput) {
+                // Kasus: 2 + = (menggunakan secondOperand dari perhitungan terakhir)
+                // Jika ini adalah perhitungan pertama (misal, 5 + =), maka secondOperand = 0,
+                // tapi jika 5 + 3 =, lalu 8 + =, maka secondOperand tetap 3.
+                // Untuk kasus sederhana (misal, 5 + =), kita anggap secondOperand = firstOperand
+                if (tvDisplay2.text.toString().endsWith("=")) {
+                    // Jika baru saja menekan =, gunakan hasil terakhir
+                } else if (secondOperand == 0.0) {
+                    secondOperand = firstOperand
+                }
+            } else {
+                secondOperand = currentInput.toDouble()
+            }
+
+            var result = 0.0
+            val operatorUsed = currentOperator
+
+            result = when (operatorUsed) {
+                "+" -> firstOperand + secondOperand
+                "-" -> firstOperand - secondOperand
+                "×" -> firstOperand * secondOperand
+                "÷" -> {
+                    if (secondOperand == 0.0) {
+                        throw ArithmeticException("Division by zero")
+                    }
+                    firstOperand / secondOperand
+                }
+                else -> 0.0
+            }
+
+            // 1. Format hasil
+            val resultFormatted = formatResult(result)
+
+            // 2. Perbarui Display 2 dengan operasi lengkap
+            // Contoh: "2 + 3 × 6" menjadi "2 + 3 × 6 ="
+            tvDisplay2.text = tvDisplay2.text.toString() + " ${formatResult(secondOperand)} ="
+
+
+            // 3. Reset status untuk perhitungan baru
+            currentInput = resultFormatted
+            currentOperator = "" // Hentikan operator
+            firstOperand = result // Hasilnya disimpan jika user menekan operator lagi
+            shouldResetInput = true // Siap menerima input baru
+
             updateDisplay()
 
         } catch (e: ArithmeticException) {
@@ -171,7 +271,7 @@ class kalkulator : AppCompatActivity() {
 
     private fun formatResult(result: Double): String {
         return if (result % 1 == 0.0) {
-            result.toInt().toString()
+            result.toLong().toString() // Gunakan toLong() untuk menghindari batas Int yang kecil
         } else {
             // Batasi hingga 10 digit desimal dan hapus trailing zeros
             String.format("%.10f", result).removeTrailingZeros()
@@ -194,7 +294,9 @@ class kalkulator : AppCompatActivity() {
     }
 
     private fun backspace() {
-        if (currentInput.length > 1) {
+        if (shouldResetInput) return // Jangan backspace jika input adalah hasil perhitungan
+
+        if (currentInput.length > 1 && !(currentInput.length == 2 && currentInput.startsWith("-"))) {
             currentInput = currentInput.substring(0, currentInput.length - 1)
         } else {
             currentInput = "0"
@@ -223,10 +325,7 @@ class kalkulator : AppCompatActivity() {
     private fun updateDisplay() {
         tvDisplay1.text = currentInput
 
-        // Update display2 dengan operasi yang sedang berlangsung
-        if (currentOperator.isNotEmpty() && !shouldResetInput) {
-            tvDisplay2.text = "$firstOperand $currentOperator"
-        }
+        // tvDisplay2 diupdate secara eksplisit di onOperatorClick, performIntermediateCalculation, dan calculateResult
     }
 
     private fun showError(message: String) {
@@ -248,6 +347,13 @@ class kalkulator : AppCompatActivity() {
             Toast.makeText(this, "Tidak ada hasil yang valid untuk checkout", Toast.LENGTH_SHORT).show()
             return
         }
+
+        // Asumsi ada CheckoutActivity
+        // val intent = Intent(this, CheckoutActivity::class.java)
+        // intent.putExtra("CALCULATOR_RESULT", result)
+        // startActivity(intent)
+
+        Toast.makeText(this, "Checkout dengan hasil: $result", Toast.LENGTH_LONG).show()
     }
 
     // Extension function untuk menghapus nol trailing
@@ -258,5 +364,4 @@ class kalkulator : AppCompatActivity() {
             this
         }
     }
-
-        }
+}
