@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Project Mars</string>
-    <string name="Alamat">Addres</string>
     <string name="Tanggal_lahir">Date of Birth</string>
     <string name="Pendidikan">Education</string>
     <string name="Telepon">Telephone</string>
@@ -51,4 +50,10 @@
     <string name="Simpan">Save</string>
     <string name="Hasil_Formulir">Form Result</string>
     <string name="nama">Name</string>
+    <string name="alamat">address</string>
+    <string name="Alamat">Address</string>
+    <string name="logo_aplikasi">Logo Aplikasi</string>
+    <string name="ikon_exit">Ikon Exit</string>
+    <string name="foto_profil_pengguna">Foto Profil Pengguna</string>
+    <string name="semoga_sehat_selalu">Semoga Sehat Selalu</string>
 </resources>

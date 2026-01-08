@@ -92,7 +92,7 @@
                         android:id="@+id/label_alamat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/Alamat"
+                        android:text="@string/alamat"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"

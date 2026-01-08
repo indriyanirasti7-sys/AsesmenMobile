@@ -16,7 +16,6 @@
         <item>Kelvin</item>
     </string-array>
 
-    <string name="Alamat">Alamat</string>
     <string name="Tanggal_lahir">Tanggal Lahir</string>
     <string name="Pendidikan">Pendidikan</string>
     <string name="Telepon">Telepon</string>
@@ -66,6 +65,38 @@
     <string name="Simpan">Simpan</string>
     <string name="Hasil_Formulir">Hasil Formulir</string>
     <string name="nama">Nama</string>
+    <string name="alamat">"Alamat "</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat">alamat</string>
+    <string name="alamat">alamat</string>
+    <string name="Alamat">Alamat</string>
+    <string name="ikon_penjualan">Ikon Penjualan</string>
+    <string name="ikon_konversi_suhu">Ikon Konversi Suhu</string>
+    <string name="ikon_kalkulator">Ikon Kalkulator</string>
+    <string name="logo_aplikasi">Logo Aplikasi</string>
+    <string name="ikon_exit">Ikon Exit</string>
+    <string name="ikon_profil">Ikon Profil</string>
+    <string name="ikon_formulir">Ikon Formulir</string>
+    <string name="project">Project</string>
+    <string name="ikon_instagram">Ikon Instagram</string>
+    <string name="_22_maret_2008">22 Maret 2008</string>
+    <string name="foto_profil_pengguna">Foto Profil Pengguna</string>
+    <string name="semoga_sehat_selalu">Semoga Sehat Selalu</string>
+    <string name="ikon_alamat">Ikon Alamat</string>
+    <string name="ikon_tanggal_lahir">Ikon Tanggal Lahir</string>
+    <string name="ikon_pendidikan">Ikon Pendidikan</string>
+    <string name="ikon_telepon">Ikon Telepon</string>
+    <string name="ikon_bio">Ikon Bio</string>
+    <string name="rasti_widya">Rasti Widya</string>
+    <string name="indriyanirasti7_gmail_com">indriyanirasti7@gmail.com</string>
+    <string name="jebres_pucangsawit_surakarta">Jebres,Pucangsawit Surakarta</string>
+    <string name="smk_n_6_surakarta">SMK N 6 Surakarta</string>
+    <string name="_081234567890">081234567890</string>
+    <string name="sunflower_seeker">sunflower_.seeker</string>
+    <string name="bio">Bio</string>
 
 </resources>
 

@@ -26,21 +26,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="-140dp">
+            android:layout_marginTop="-140dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/img_illustration"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/buku"
-                android:contentDescription="Logo Aplikasi" />
+                android:contentDescription="@string/logo_aplikasi" />
 
             <TextView
                 android:id="@+id/tv_app_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Project"
+                android:text="@string/project"
                 android:textColor="@android:color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -80,11 +81,12 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Ikon Formulir"
+                        android:contentDescription="@string/ikon_formulir"
                         android:src="@drawable/formulir" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -113,11 +115,12 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:contentDescription="Ikon Kalkulator"
+                        android:contentDescription="@string/ikon_kalkulator"
                         android:src="@drawable/kalkulator" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -164,12 +167,13 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/penjualan"
-                        android:contentDescription="Ikon Penjualan" />
+                        android:contentDescription="@string/ikon_penjualan" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -196,12 +200,13 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/suhu"
-                        android:contentDescription="Ikon Konversi Suhu" />
+                        android:contentDescription="@string/ikon_konversi_suhu" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,7 +258,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/profil"
-                        android:contentDescription="Ikon Profil" />
+                        android:contentDescription="@string/ikon_profil" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -285,7 +290,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/keluar"
-                        android:contentDescription="Ikon Exit"/>
+                        android:contentDescription="@string/ikon_exit"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

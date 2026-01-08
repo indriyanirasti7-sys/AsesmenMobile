@@ -62,14 +62,14 @@
                         android:src="@drawable/profile_akhir"
                         android:scaleType="centerCrop"
                         android:padding="3dp"
-                        android:contentDescription="Foto Profil Pengguna" />
+                        android:contentDescription="@string/foto_profil_pengguna" />
                 </androidx.cardview.widget.CardView>
 
                 <!-- Nama -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rasti Widya"
+                    android:text="@string/rasti_widya"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"
@@ -79,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="indriyanirasti7@gmail.com"
+                    android:text="@string/indriyanirasti7_gmail_com"
                     android:textColor="@color/black"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -115,7 +115,7 @@
                         android:layout_height="24dp"
                         android:src="@drawable/alamat"
                         android:layout_marginHorizontal="12dp"
-                        android:contentDescription="Ikon Alamat"/>
+                        android:contentDescription="@string/ikon_alamat"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Alamat"
+                            android:text="@string/alamat"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -133,7 +133,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Jebres,Pucangsawit Surakarta"
+                            android:text="@string/jebres_pucangsawit_surakarta"
                             android:textColor="@color/black"
                             android:textSize="14sp"/>
                     </LinearLayout>
@@ -156,7 +156,7 @@
                         android:layout_height="24dp"
                         android:src="@drawable/kalender"
                         android:layout_marginHorizontal="12dp"
-                        android:contentDescription="Ikon Tanggal Lahir"/>
+                        android:contentDescription="@string/ikon_tanggal_lahir"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="22 Maret 2008"
+                            android:text="@string/_22_maret_2008"
                             android:textColor="@color/black"
                             android:textSize="14sp"/>
                     </LinearLayout>
@@ -198,7 +198,7 @@
                         android:layout_height="24dp"
                         android:src="@drawable/pendidikan"
                         android:layout_marginHorizontal="12dp"
-                        android:contentDescription="Ikon Pendidikan"/>
+                        android:contentDescription="@string/ikon_pendidikan"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -216,7 +216,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SMK N 6 Surakarta"
+                            android:text="@string/smk_n_6_surakarta"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -240,7 +240,7 @@
                         android:layout_height="24dp"
                         android:layout_marginHorizontal="12dp"
                         android:src="@drawable/telepon"
-                        android:contentDescription="Ikon Telepon" />
+                        android:contentDescription="@string/ikon_telepon" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -258,7 +258,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="081234567890"
+                            android:text="@string/_081234567890"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -282,7 +282,7 @@
                         android:layout_height="24dp"
                         android:layout_marginHorizontal="12dp"
                         android:src="@drawable/ig"
-                        android:contentDescription="Ikon Instagram" />
+                        android:contentDescription="@string/ikon_instagram" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -300,7 +300,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="sunflower_.seeker"
+                            android:text="@string/sunflower_seeker"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -323,7 +323,7 @@
                         android:layout_height="24dp"
                         android:layout_marginHorizontal="12dp"
                         android:src="@drawable/informasi_bio"
-                        android:contentDescription="Ikon Bio" />
+                        android:contentDescription="@string/ikon_bio" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -333,7 +333,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bio"
+                            android:text="@string/bio"
                             android:textColor="#000000"
                             android:textStyle="bold"
                             android:textSize="16sp" />
@@ -341,7 +341,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Semoga Sehat Selalu"
+                            android:text="@string/semoga_sehat_selalu"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
                     </LinearLayout>
