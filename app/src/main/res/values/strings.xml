@@ -15,5 +15,57 @@
         <item>Farenheit</item>
         <item>Kelvin</item>
     </string-array>
+
+    <string name="Alamat">Alamat</string>
+    <string name="Tanggal_lahir">Tanggal Lahir</string>
+    <string name="Pendidikan">Pendidikan</string>
+    <string name="Telepon">Telepon</string>
+    <string name="Instagram">Instagram</string>
+    <string name="Bio">Bio</string>
+    <string name="Edit_Profil">Edit Profil</string>
+    <string name="Menu_Utama">Menu Utama</string>
+    <string name="Formulir">Formulir</string>
+    <string name="Kalkulator">Kalkulator</string>
+    <string name="Penjualan">Penjualan</string>
+    <string name="Konversi_Suhu">Konversi Suhu</string>
+    <string name="Profil">Profil</string>
+    <string name="Keluar">Keluar</string>
+    <string name="Menu_Lain">Menu Lain</string>
+    <string name="Menu_Tambahan">Menu Tambahan</string>
+    <string name="KALKULATOR">KALKULATOR</string>
+    <string name="Masukkan_Angka">Masukkan Angka :</string>
+    <string name="Hitung">Hitung</string>
+    <string name="Hapus">Hapus</string>
+    <string name="Jumlah">Jumlah</string>
+    <string name="Total">Total :</string>
+    <string name="Checkout">Checkout</string>
+    <string name="Apakah_Anda_Yakin_Ingin_Keluar">Apakah Anda Yakin Ingin Keluar</string>
+    <string name="Tidak">Tidak</string>
+    <string name="Ya">Ya</string>
+    <string name="Nota_Pembelian">NOTA PEMBELIAN</string>
+    <string name="Informasi_Pelanggan">Informasi Pelanggan</string>
+    <string name="Nama">Nama :</string>
+    <string name="Meja">Meja :</string>
+    <string name="Detail_Pesanan">Detail Pesanan</string>
+    <string name="Item">Item</string>
+    <string name="Kembali">Kembali</string>
+    <string name="FORMULIR_PENDAFTARAN">FORMULIR PENDAFTARAN</string>
+    <string name="Masukkan_Nama_Lengkap">Masukkan Nama Lengkap</string>
+    <string name="Masukkan_Alamat_Lengkap">Masukkan Alamat Lengkap</string>
+    <string name="Nomor_Handphone">Nomor Handphone</string>
+    <string name="Masukkan_Nomor">Masukkan Nomor</string>
+    <string name="Agama">Agama</string>
+    <string name="Jenis_Kelamin">Jenis Kelamin</string>
+    <string name="Laki_Laki">Laki - Laki</string>
+    <string name="Perempuan">Perempuan</string>
+    <string name="Hobi">Hobi</string>
+    <string name="Membaca">Membaca</string>
+    <string name="Merajut">Merajut</string>
+    <string name="Olahraga">Olahraga</string>
+    <string name="Melukis">Melukis</string>
+    <string name="Simpan">Simpan</string>
+    <string name="Hasil_Formulir">Hasil Formulir</string>
+    <string name="nama">Nama</string>
+
 </resources>
 

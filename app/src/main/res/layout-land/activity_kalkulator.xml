@@ -16,7 +16,7 @@
         android:background="@drawable/latarbelakang_kalkulator"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="KALKULATOR"
+        android:text="@string/KALKULATOR"
         android:textSize="16sp"
         android:textStyle="bold" />
 

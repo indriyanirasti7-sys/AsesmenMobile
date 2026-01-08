@@ -31,7 +31,7 @@
                 android:id="@+id/judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FORMULIR PENDAFTARAN"
+                android:text="@string/FORMULIR_PENDAFTARAN"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -57,7 +57,7 @@
                     android:id="@+id/label_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama"
+                    android:text="@string/nama"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="Masukkan Nama Lengkap"
+                        android:hint="@string/Masukkan_Nama_Lengkap"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:textColor="@color/black"
@@ -87,7 +87,7 @@
                     android:id="@+id/label_alamat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alamat"
+                    android:text="@string/Alamat"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -105,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="Masukkan Alamat Lengkap"
+                        android:hint="@string/Masukkan_Alamat_Lengkap"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:textColor="@color/black"
@@ -117,7 +117,7 @@
                     android:id="@+id/label_hp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No Handphone"
+                    android:text="@string/Nomor_Handphone"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -135,7 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="Masukkan Nomor Handphone"
+                        android:hint="@string/Masukkan_Nomor"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:textColor="@color/black"
@@ -147,7 +147,7 @@
                     android:id="@+id/agama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Agama"
+                    android:text="@string/Agama"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -174,7 +174,7 @@
                     android:id="@+id/label_jk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jenis Kelamin"
+                    android:text="@string/Jenis_Kelamin"
                     android:layout_marginTop="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -190,14 +190,14 @@
                         android:id="@+id/radio_laki"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Laki-Laki"
+                        android:text="@string/Laki_Laki"
                         android:textColor="@color/black"
                         android:layout_marginEnd="30dp"/>
                     <RadioButton
                         android:id="@+id/radio_perempuan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Perempuan"
+                        android:text="@string/Perempuan"
                         android:textColor="@color/black"/>
                 </RadioGroup>
 
@@ -206,7 +206,7 @@
                     android:id="@+id/label_hobi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hobi"
+                    android:text="@string/Hobi"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -224,28 +224,28 @@
                         android:id="@+id/checkbox_membaca"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Membaca"
+                        android:text="@string/Membaca"
                         android:textColor="@color/black"/>
 
                     <CheckBox
                         android:id="@+id/checkbox_merajut"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Merajut"
+                        android:text="@string/Merajut"
                         android:textColor="@color/black"/>
 
                     <CheckBox
                         android:id="@+id/checkbox_olahraga"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Olahraga"
+                        android:text="@string/Olahraga"
                         android:textColor="@color/black"/>
 
                     <CheckBox
                         android:id="@+id/checkbox_melukis"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Melukis"
+                        android:text="@string/Melukis"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -264,7 +264,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="SUBMIT"
+                        android:text="@string/Simpan"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:textSize="18sp"

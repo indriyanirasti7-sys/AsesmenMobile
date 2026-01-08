@@ -68,7 +68,7 @@
                 android:id="@+id/tv_menu_utama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Menu Utama"
+                android:text="@string/Menu_Utama"
                 android:textColor="@color/pink_white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -105,7 +105,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Formulir"
+                            android:text="@string/Formulir"
                             android:textColor="@android:color/white"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -137,7 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Kalkulator"
+                            android:text="@string/Kalkulator"
                             android:textColor="@android:color/white"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -168,7 +168,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Penjualan"
+                            android:text="@string/Penjualan"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
@@ -180,7 +180,7 @@
                 android:id="@+id/tv_menu_tambahan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Menu Tambahan "
+                android:text="@string/Menu_Tambahan"
                 android:textColor="@color/pink_white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -216,7 +216,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Konversi Suhu"
+                            android:text="@string/Konversi_Suhu"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
@@ -248,7 +248,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Profil"
+                            android:text="@string/Profil"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white" />
@@ -279,7 +279,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Exit"
+                            android:text="@string/Keluar"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/white"/>

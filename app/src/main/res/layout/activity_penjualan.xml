@@ -128,7 +128,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:inputType="number"
-                                android:hint="Jumlah"/>
+                                android:hint="@string/Jumlah"/>
 
 
                         </LinearLayout>
@@ -216,7 +216,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:inputType="number"
-                                android:hint="Jumlah" />
+                                android:hint="@string/Jumlah" />
 
 
                         </LinearLayout>
@@ -304,7 +304,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:inputType="number"
-                                android:hint="Jumlah"/>
+                                android:hint="@string/Jumlah"/>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -391,7 +391,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:inputType="number"
-                                android:hint="Jumlah"/>
+                                android:hint="@string/Jumlah"/>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -476,7 +476,7 @@
                                 android:id="@+id/et_qty_5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="Jumlah"
+                                android:hint="@string/Jumlah"
                                 android:inputType="number"
                                 android:textColor="@color/white" />
 
@@ -510,7 +510,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Total:"
+            android:text="@string/Total"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF" />
@@ -529,7 +529,7 @@
             android:id="@+id/btn_checkout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Checkout"
+            android:text="@string/Checkout"
             android:textColor="#74584d"
             android:backgroundTint="#FFFFFF" />
 

@@ -53,7 +53,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Menu Utama"
+            android:text="@string/Menu_Utama"
             android:textColor="@color/pink_white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -90,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Formulir"
+                        android:text="@string/Formulir"
                         android:textColor="@android:color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -123,7 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Kalkulator"
+                        android:text="@string/Kalkulator"
                         android:textColor="@android:color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -134,7 +134,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Lain"
+            android:text="@string/Menu_Lain"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="16dp"
@@ -174,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Penjualan"
+                        android:text="@string/Penjualan"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white" />
@@ -206,8 +206,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Konversi Suhu"
-                        android:textSize="16sp"
+                        android:text="@string/Konversi_Suhu"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white" />
                 </LinearLayout>
@@ -217,7 +217,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Tambahan"
+            android:text="@string/Menu_Tambahan"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="16dp"
@@ -258,7 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Profil"
+                        android:text="@string/Profil"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white" />
@@ -290,7 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Exit"
+                        android:text="@string/Keluar"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"/>

@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOTA PEMBELIAN"
+            android:text="@string/Nota_Pembelian"
             android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -47,7 +47,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Informasi Pelanggan"
+                android:text="@string/Informasi_Pelanggan"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -56,14 +56,14 @@
                 android:id="@+id/tv_customer_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama: -"
+                android:text="@string/Nama"
                 android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/tv_table_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Meja: -"
+                android:text="@string/Meja"
                 android:textSize="14sp"
                 android:layout_marginBottom="16dp"/>
 
@@ -71,7 +71,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Detail Pesanan"
+                android:text="@string/Detail_Pesanan"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp"/>
@@ -150,7 +150,7 @@
                 android:id="@+id/tv_total"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Total: Rp 0"
+                android:text="@string/Total"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="end"
@@ -163,7 +163,7 @@
         android:id="@+id/btn_back_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kembali"
+        android:text="@string/Kembali"
         android:backgroundTint="@color/ijo"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="12dp"

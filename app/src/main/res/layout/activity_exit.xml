@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apakah Anda Yakin Ingin Keluar?"
+            android:text="@string/Apakah_Anda_Yakin_Ingin_Keluar"
             android:textStyle="bold"
             android:textColor="@color/light_Pink"
             android:layout_gravity="center"
@@ -49,7 +49,7 @@
                 android:layout_width="2dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                android:text="Tidak"
+                android:text="@string/Tidak"
                 android:textStyle="bold"
                 android:textColor="#333333"
                 android:backgroundTint="#E0E0E0"
@@ -67,7 +67,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E53935"
                 android:padding="10dp"
-                android:text="Ya"
+                android:text="@string/Ya"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>
